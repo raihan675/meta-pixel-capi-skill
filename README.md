@@ -42,6 +42,17 @@ git pull
 
 ---
 
+## 🛡️ Interactive Discovery & Verification Gate
+Whenever an agent activates this skill, it follows a strict **Discovery Gate** before executing any code or GTM configuration. It always asks the user to verify:
+1. **Target Platform / CMS**: (WooCommerce, Shopify, PrestaShop, Custom Headless)
+2. **Implementation Scope**: (Hybrid Dual-Tagging vs. Browser-only vs. Server CAPI-only)
+3. **Server Infrastructure**: (Stape.io vs. GCP, custom subdomain DNS setup)
+4. **Template Preference**: (Stape.io custom loader vs. Meta Official `facebookarchive`)
+5. **DataLayer Health**: (Checking standard GA4 ecommerce triggers and parameters)
+6. **Meta Credentials**: (Dataset ID, CAPI Access Token, Test Event Code)
+
+---
+
 ## 🎯 Step-by-Step Implementation Playbooks & Template Guide
 
 Get straight to implementation using our dedicated, production-verified playbooks:

@@ -13,6 +13,31 @@ Use this skill whenever you need to design, implement, audit, or troubleshoot Me
 
 ---
 
+## ⚠️ Mandatory Pre-Implementation Discovery Gate (ALWAYS ASK FIRST)
+
+**CRITICAL OPERATING RULE:** Whenever this skill is invoked to implement, audit, or modify tracking, **NEVER proceed blindly or generate arbitrary configurations without verification**. You MUST first ask the user the following structured discovery questions (or confirm any parameters not already established in context):
+
+1. **Target Platform / CMS:**
+   * What platform or framework does the website use? *(e.g., WooCommerce, Shopify, PrestaShop, Magento, Next.js / Custom Headless)*
+2. **Tracking Architecture Scope:**
+   * **Option A (Recommended):** Full Hybrid Dual-Tagging (Browser Pixel + Server-Side CAPI with strict deduplication).
+   * **Option B:** Browser-Side Meta Pixel only (Web GTM).
+   * **Option C:** Server-Side Conversions API only (Server GTM / Direct API).
+3. **Server-Side Infrastructure (If CAPI is involved):**
+   * Are you hosting Server GTM on **Stape.io** (recommended) or **Google Cloud Platform (GCP)**?
+   * Do you have access to DNS to map a first-party custom tagging subdomain (e.g., `ss.yourdomain.com`)?
+4. **Web GTM Tag Template Preference:**
+   * **Stape.io Facebook Pixel Template:** *(Recommended for Stape users)* — Enables the Custom Loader to bypass browser ad-blockers (recovers 15–25% lost browser hits), extends Safari ITP cookies, and provides automatic client-side hashing.
+   * **Meta Official Template (`facebookarchive`):** — Direct Meta-maintained standard for strict corporate compliance.
+5. **DataLayer Availability:**
+   * Is a standard GA4-compliant ecommerce DataLayer already active on the site, or does the DataLayer need to be audited/implemented first?
+6. **Meta Credentials Readiness:**
+   * Do you already have the **Meta Dataset / Pixel ID**, **Conversions API Access Token**, and optional **Test Event Code** (`TESTxxxxx`)?
+
+*Wait for the user's response or confirm reasonable defaults based on their specific answers before executing tag creation, script deployment, or container JSON exports.*
+
+---
+
 ## 1. Core Operating Principles
 
 1. **Always Implement Dual-Tagging:**
