@@ -53,10 +53,34 @@ Use this skill whenever you need to design, implement, audit, or troubleshoot Me
 
 ---
 
-## 3. Skill Documentation Index
+## 3. Step-by-Step Playbooks & Template Decision Engine
+
+### A. Dedicated Implementation Playbooks
+* 📘 **Playbook 1: Browser Meta Pixel**: [setup-guides/01-meta-pixel-browser-setup-guide.md](./setup-guides/01-meta-pixel-browser-setup-guide.md)
+  * Full Web GTM procedural guide covering base `PageView`, `ViewContent`, `AddToCart`, `InitiateCheckout`, `Purchase`, and Advanced Matching.
+* 📗 **Playbook 2: Server-Side Conversions API (CAPI)**: [setup-guides/02-meta-conversions-api-server-guide.md](./setup-guides/02-meta-conversions-api-server-guide.md)
+  * Complete 12-step lifecycle covering sGTM, Stape.io, custom domains (`ss.domain.com`), GA4 routing, `x-fb-cd-*` parameter translation, deduplication, and EMQ 8.0+.
+
+### B. Template Selection Engine: "Which Tag Template Should I Use?"
+When asked which Web GTM Pixel tag template to choose:
+* 🏆 **Choose Stape.io Facebook Pixel Template (`stape-io`) IF**:
+  1. Server-side tracking / CAPI runs through Stape.io.
+  2. You want the Custom Loader to bypass browser ad-blockers (uBlock, Brave, AdGuard) and recover 15–25% lost browser hits.
+  3. You want native `event_id` fields and automated client-side SHA-256 user data hashing.
+* 🏛️ **Choose Meta Official Template (`facebookarchive` / `meta`) IF**:
+  1. The client has strict corporate policies prohibiting third-party vendor templates.
+  2. You want direct 1:1 parity with Meta's developer documentation screenshots.
+* 👉 Detailed comparison and configuration guide: [03-web-gtm-implementation/meta-official-vs-stape-pixel-template.md](./03-web-gtm-implementation/meta-official-vs-stape-pixel-template.md).
+
+---
+
+## 4. Skill Documentation Index
 
 Refer to the included modular guides for step-by-step procedures:
 
+* [Meta Official vs Stape Pixel Template Guide](./03-web-gtm-implementation/meta-official-vs-stape-pixel-template.md)
+* [Playbook 1: Browser Pixel Setup Guide](./setup-guides/01-meta-pixel-browser-setup-guide.md)
+* [Playbook 2: Server Conversions API Setup Guide](./setup-guides/02-meta-conversions-api-server-guide.md)
 * [Architecture & Data Flow](./01-architecture-and-fundamentals/dual-tagging-hybrid-architecture.md)
 * [Event Deduplication Guide](./01-architecture-and-fundamentals/event-deduplication-guide.md)
 * [Event Match Quality (EMQ) Guide](./01-architecture-and-fundamentals/event-match-quality-emq.md)

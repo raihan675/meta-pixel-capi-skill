@@ -42,6 +42,19 @@ git pull
 
 ---
 
+## 🎯 Step-by-Step Implementation Playbooks & Template Guide
+
+Get straight to implementation using our dedicated, production-verified playbooks:
+
+* 📘 **[Playbook 1: Meta Pixel Browser-Side Setup Guide (Web GTM)](./setup-guides/01-meta-pixel-browser-setup-guide.md)**
+  Complete walkthrough for Web GTM client-side tracking: `PageView`, `ViewContent`, `AddToCart`, `InitiateCheckout`, `Purchase`, and Advanced Matching.
+* 📗 **[Playbook 2: Meta Conversions API (CAPI) Server-Side Setup Guide (sGTM + Stape)](./setup-guides/02-meta-conversions-api-server-guide.md)**
+  Complete 12-step lifecycle: sGTM provisioning, Stape custom domain (`ss.domain.com`), GA4 transport, `x-fb-cd-*` parameter translation, deduplication, and EMQ 8.0+.
+* ⚖️ **[Template Selection Guide: Meta Official vs. Stape.io Pixel Template](./03-web-gtm-implementation/meta-official-vs-stape-pixel-template.md)**
+  Direct comparison, ad-blocker bypassing analysis, cookie preservation, and decision matrix for choosing between `facebookarchive` and `stape-io` Web GTM templates.
+
+---
+
 ## 📂 Repository Structure & Navigation
 
 ### [01. Architecture & Fundamentals](./01-architecture-and-fundamentals)
@@ -63,6 +76,7 @@ Complete parameter definitions and schemas:
 
 ### [03. Web GTM Implementation](./03-web-gtm-implementation)
 Step-by-step setup in the client-side Web GTM container:
+* **[Meta Official vs. Stape Pixel Template Guide](./03-web-gtm-implementation/meta-official-vs-stape-pixel-template.md):** Architectural comparison, ad-blocker bypassing, cookie duration, and template selection guide.
 * **[Web Container Setup Guide](./03-web-gtm-implementation/web-container-setup-guide.md):** High-level roadmap, templates to import, and container settings.
 * **[Google Tag Configuration](./03-web-gtm-implementation/google-tag-configuration.md):** Configuring `server_container_url`, `send_page_view`, `first_party_collection`, and base Meta cookie parameters.
 * **[Client-Side Meta Pixel Tags](./03-web-gtm-implementation/web-pixel-tags.md):** Tag configuration for `PageView`, `ViewContent`, `AddToCart`, `InitiateCheckout`, and `Purchase`.
