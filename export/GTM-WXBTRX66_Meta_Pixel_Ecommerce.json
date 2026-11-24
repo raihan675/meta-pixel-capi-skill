@@ -1,120 +1,819 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-11-24T07:38:59.764Z",
+  "exportTime": "2026-11-24T09:37:29.845Z",
   "containerVersion": {
     "path": "accounts/6251820990/containers/288471691/versions/0",
     "accountId": "6251820990",
     "containerId": "288471691",
-    "container": {
-      "path": "accounts/6251820990/containers/288471691",
-      "accountId": "6251820990",
-      "containerId": "288471691",
-      "name": "maindish.in",
-      "publicId": "GTM-WXBTRX66",
-      "usageContext": [
-        "web"
-      ]
-    },
     "tag": [
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/tags/35",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "tagId": "1",
+        "workspaceId": "2",
+        "tagId": "35",
         "name": "Meta Pixel - Base (PageView)",
-        "type": "html",
+        "type": "cvt_288471691_33",
         "parameter": [
           {
             "type": "template",
-            "key": "html",
-            "value": "<script>\n  !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n  n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];\n  s.parentNode.insertBefore(t,s)}(window, document,'script',\n  'https://connect.facebook.net/en_US/fbevents.js');\n  \n  fbq('init', '{{Const - Meta Pixel ID}}');\n  fbq('track', 'PageView', {}, { eventID: '{{Event ID - De duplication}}' });\n</script>"
+            "key": "eventId",
+            "value": "{{Event ID - De duplication}}"
           },
           {
-            "type": "boolean",
-            "key": "supportDocumentWrite",
-            "value": "false"
+            "type": "template",
+            "key": "eventNameStandard",
+            "value": "PageView"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "standard"
+          },
+          {
+            "type": "template",
+            "key": "pixelIds",
+            "value": "{{Const - Meta Pixel ID}}"
+          },
+          {
+            "type": "template",
+            "key": "inheritEventName",
+            "value": "override"
           }
         ],
+        "fingerprint": "1795508715970",
         "firingTriggerId": [
-          "2147479553"
-        ]
+          "23"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/tags/35?apiLink=tag",
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/tags/36",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "tagId": "2",
+        "workspaceId": "2",
+        "tagId": "36",
         "name": "Meta Pixel - ViewContent",
-        "type": "html",
+        "type": "cvt_288471691_33",
         "parameter": [
           {
             "type": "template",
-            "key": "html",
-            "value": "<script>\n  fbq('track', 'ViewContent', {\n    content_type: 'product',\n    content_ids: {{cJS - FB - Product ID}},\n    content_name: {{cJS - FB - Product Name}},\n    content_category: {{cJS - FB - Product Category}},\n    contents: {{cJS - FB - Contents}},\n    value: {{DLV - Value}},\n    currency: {{DLV - Currency}}\n  }, { eventID: '{{Event ID - De duplication}}' });\n</script>"
+            "key": "eventId",
+            "value": "{{Event ID - De duplication}}"
           },
           {
-            "type": "boolean",
-            "key": "supportDocumentWrite",
-            "value": "false"
+            "type": "template",
+            "key": "eventNameStandard",
+            "value": "ViewContent"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "standard"
+          },
+          {
+            "type": "template",
+            "key": "pixelIds",
+            "value": "{{Const - Meta Pixel ID}}"
+          },
+          {
+            "type": "template",
+            "key": "inheritEventName",
+            "value": "override"
+          },
+          {
+            "type": "list",
+            "key": "objectPropertiesList",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_type"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "product"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_ids"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product ID}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_name"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product Name}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_category"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product Category}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "contents"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Contents}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "value"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Value}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "currency"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Currency}}"
+                  }
+                ]
+              }
+            ]
           }
         ],
+        "fingerprint": "1795509726263",
         "firingTriggerId": [
-          "1"
-        ]
+          "24"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/tags/36?apiLink=tag",
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/tags/37",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "tagId": "3",
+        "workspaceId": "2",
+        "tagId": "37",
         "name": "Meta Pixel - AddToCart",
-        "type": "html",
+        "type": "cvt_288471691_33",
         "parameter": [
           {
             "type": "template",
-            "key": "html",
-            "value": "<script>\n  fbq('track', 'AddToCart', {\n    content_type: 'product',\n    content_ids: {{cJS - FB - Product ID}},\n    content_name: {{cJS - FB - Product Name}},\n    content_category: {{cJS - FB - Product Category}},\n    contents: {{cJS - FB - Contents}},\n    value: {{DLV - Value}},\n    currency: {{DLV - Currency}}\n  }, { eventID: '{{Event ID - De duplication}}' });\n</script>"
+            "key": "eventId",
+            "value": "{{Event ID - De duplication}}"
           },
           {
-            "type": "boolean",
-            "key": "supportDocumentWrite",
-            "value": "false"
+            "type": "template",
+            "key": "eventNameStandard",
+            "value": "AddToCart"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "standard"
+          },
+          {
+            "type": "template",
+            "key": "pixelIds",
+            "value": "{{Const - Meta Pixel ID}}"
+          },
+          {
+            "type": "template",
+            "key": "inheritEventName",
+            "value": "override"
+          },
+          {
+            "type": "list",
+            "key": "objectPropertiesList",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_type"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "product"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_ids"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product ID}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_name"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product Name}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_category"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product Category}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "contents"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Contents}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "value"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Value}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "currency"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Currency}}"
+                  }
+                ]
+              }
+            ]
           }
         ],
+        "fingerprint": "1795509727818",
         "firingTriggerId": [
-          "2"
-        ]
+          "25"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/tags/37?apiLink=tag",
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/tags/38",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "tagId": "4",
+        "workspaceId": "2",
+        "tagId": "38",
         "name": "Meta Pixel - InitiateCheckout",
-        "type": "html",
+        "type": "cvt_288471691_33",
         "parameter": [
           {
             "type": "template",
-            "key": "html",
-            "value": "<script>\n  fbq('track', 'InitiateCheckout', {\n    content_type: 'product',\n    content_ids: {{cJS - FB - Product ID}},\n    contents: {{cJS - FB - Contents}},\n    num_items: {{cJS - FB - Num of Items}},\n    value: {{DLV - Value}},\n    currency: {{DLV - Currency}}\n  }, { eventID: '{{Event ID - De duplication}}' });\n</script>"
+            "key": "eventId",
+            "value": "{{Event ID - De duplication}}"
           },
           {
-            "type": "boolean",
-            "key": "supportDocumentWrite",
-            "value": "false"
+            "type": "template",
+            "key": "eventNameStandard",
+            "value": "InitiateCheckout"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "standard"
+          },
+          {
+            "type": "template",
+            "key": "pixelIds",
+            "value": "{{Const - Meta Pixel ID}}"
+          },
+          {
+            "type": "template",
+            "key": "inheritEventName",
+            "value": "override"
+          },
+          {
+            "type": "list",
+            "key": "objectPropertiesList",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_type"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "product"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_ids"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product ID}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "contents"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Contents}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "num_items"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Num of Items}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "value"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Value}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "currency"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Currency}}"
+                  }
+                ]
+              }
+            ]
           }
         ],
+        "fingerprint": "1795509729472",
         "firingTriggerId": [
-          "3"
-        ]
+          "26"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/tags/38?apiLink=tag",
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/tags/39",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "tagId": "5",
+        "workspaceId": "2",
+        "tagId": "39",
         "name": "Meta Pixel - Purchase",
+        "type": "cvt_288471691_33",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventId",
+            "value": "{{Event ID - De duplication}}"
+          },
+          {
+            "type": "template",
+            "key": "eventNameStandard",
+            "value": "Purchase"
+          },
+          {
+            "type": "boolean",
+            "key": "enableEdvancedMatching",
+            "value": "true"
+          },
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "standard"
+          },
+          {
+            "type": "template",
+            "key": "pixelIds",
+            "value": "{{Const - Meta Pixel ID}}"
+          },
+          {
+            "type": "list",
+            "key": "userDataList",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "em"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Customer Email}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "ph"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Customer Phone}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "fn"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Customer First Name}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "ln"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Customer Last Name}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "ct"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Customer City}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "st"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Customer State}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "zp"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Customer Postcode}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "country"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Customer Country}}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "template",
+            "key": "inheritEventName",
+            "value": "override"
+          },
+          {
+            "type": "list",
+            "key": "objectPropertiesList",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_type"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "product"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_ids"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product ID}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "content_name"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Product Name}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "contents"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Contents}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "num_items"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Num of Items}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "value"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Value}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "currency"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{cJS - FB - Currency}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "name",
+                    "value": "order_id"
+                  },
+                  {
+                    "type": "template",
+                    "key": "value",
+                    "value": "{{DLV - Transaction ID}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1795509731303",
+        "firingTriggerId": [
+          "27"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/tags/39?apiLink=tag",
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/tags/46",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "tagId": "46",
+        "name": "Listener - Swiggy AJAX AddToCart",
         "type": "html",
         "parameter": [
           {
             "type": "template",
             "key": "html",
-            "value": "<script>\n  var customerData = {};\n  var em = {{DLV - Customer Email}};\n  var ph = {{DLV - Customer Phone}};\n  var fn = {{DLV - Customer First Name}};\n  var ln = {{DLV - Customer Last Name}};\n  var ct = {{DLV - Customer City}};\n  var st = {{DLV - Customer State}};\n  var zp = {{DLV - Customer Postcode}};\n  var country = {{DLV - Customer Country}};\n\n  if (em) customerData.em = em;\n  if (ph) customerData.ph = ph;\n  if (fn) customerData.fn = fn;\n  if (ln) customerData.ln = ln;\n  if (ct) customerData.ct = ct;\n  if (st) customerData.st = st;\n  if (zp) customerData.zp = zp;\n  if (country) customerData.country = country;\n\n  if (Object.keys(customerData).length > 0) {\n    fbq('init', '{{Const - Meta Pixel ID}}', customerData);\n  }\n\n  fbq('track', 'Purchase', {\n    content_type: 'product',\n    content_ids: {{cJS - FB - Product ID}},\n    content_name: {{cJS - FB - Product Name}},\n    contents: {{cJS - FB - Contents}},\n    num_items: {{cJS - FB - Num of Items}},\n    value: {{DLV - Value}},\n    currency: {{DLV - Currency}},\n    order_id: {{DLV - Transaction ID}}\n  }, { eventID: '{{Event ID - De duplication}}' });\n</script>"
+            "value": "<script>\n/**\n * DataLayer Listener - Swiggy AJAX AddToCart\n * Resolves missing add_to_cart / add_to_cart_stape events caused by swiggy-cart plugin.\n */\n(function() {\n  if (window._swiggyAddToCartListenerAttached) return;\n  window._swiggyAddToCartListenerAttached = true;\n\n  function pushAddToCartEvent(productId, qty) {\n    qty = parseInt(qty, 10) || 1;\n    productId = String(productId || '').trim();\n    if (!productId) return;\n\n    var itemName = '';\n    var price = 0;\n    var category = '';\n    var currency = 'INR';\n\n    // 1. Check dataLayer for matching item from view_item_stape\n    var dl = window.dataLayer || [];\n    for (var i = dl.length - 1; i >= 0; i--) {\n      var entry = dl[i];\n      if (entry && entry.ecommerce) {\n        if (entry.ecommerce.currency) {\n          currency = entry.ecommerce.currency;\n        }\n        var items = entry.ecommerce.items;\n        if (items && items.length) {\n          for (var j = 0; j < items.length; j++) {\n            var it = items[j];\n            if (String(it.item_id || it.id) === productId) {\n              itemName = it.item_name || it.name || '';\n              price = parseFloat(it.price || it.item_price || 0) || 0;\n              category = it.item_category || it.category || '';\n              break;\n            }\n          }\n        }\n      }\n      if (itemName) break;\n    }\n\n    // 2. Fallback: inspect product card in DOM for loop/catalog pages\n    if (!itemName) {\n      var swiggyContainer = document.querySelector('.swiggy-cart[data-product_id=\"' + productId + '\"]');\n      var productCard = swiggyContainer ? swiggyContainer.closest('.product, .product-item, .wc-block-grid__product') : null;\n      if (productCard) {\n        var titleEl = productCard.querySelector('.product_title, .woocommerce-loop-product__title, .name a, h2, h3');\n        if (titleEl) {\n          itemName = titleEl.innerText.trim();\n        }\n        var priceEl = productCard.querySelector('.price ins .amount, .price .amount, .woocommerce-Price-amount');\n        if (priceEl) {\n          var cleanPrice = priceEl.innerText.replace(/[^0-9.]/g, '');\n          price = parseFloat(cleanPrice) || 0;\n        }\n      }\n    }\n\n    // 3. Fallback for single product page\n    if (!itemName && document.querySelector('body.single-product')) {\n      var singleTitle = document.querySelector('h1.product_title, .entry-title');\n      if (singleTitle) {\n        itemName = singleTitle.innerText.trim();\n      }\n      var singlePrice = document.querySelector('.price ins .amount, .price .amount, .woocommerce-Price-amount');\n      if (singlePrice) {\n        var cleanSinglePrice = singlePrice.innerText.replace(/[^0-9.]/g, '');\n        price = parseFloat(cleanSinglePrice) || 0;\n      }\n    }\n\n    var totalValue = parseFloat((price * qty).toFixed(2));\n\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({ ecommerce: null });\n    window.dataLayer.push({\n      event: 'add_to_cart_stape',\n      ecommerce: {\n        currency: currency,\n        value: String(totalValue),\n        items: [\n          {\n            item_id: productId,\n            item_name: itemName,\n            price: String(price),\n            quantity: qty,\n            item_category: category\n          }\n        ]\n      }\n    });\n\n    if (window.jQuery) {\n      window.jQuery(document.body).trigger('added_to_cart');\n    }\n  }\n\n  function attachListener() {\n    if (window.jQuery) {\n      window.jQuery(document).on('ajaxSuccess', function(event, xhr, settings) {\n        try {\n          if (!settings || !settings.url) return;\n          if (settings.url.indexOf('wc-ajax=add_to_cart') === -1) return;\n          if (xhr.responseJSON && xhr.responseJSON.error === true) return;\n\n          var data = settings.data;\n          var productId = '';\n          var qty = 1;\n\n          if (typeof data === 'string') {\n            var params = new URLSearchParams(data);\n            productId = params.get('product_id');\n            qty = params.get('quantity') || 1;\n          } else if (data && typeof data === 'object') {\n            productId = data.product_id;\n            qty = data.quantity || 1;\n          }\n\n          if (productId) {\n            pushAddToCartEvent(productId, qty);\n          }\n        } catch (e) {\n          console.error('[GTM DataLayer Listener] Error:', e);\n        }\n      });\n    } else {\n      setTimeout(attachListener, 200);\n    }\n  }\n\n  attachListener();\n})();\n</script>"
           },
           {
             "type": "boolean",
@@ -122,16 +821,34 @@
             "value": "false"
           }
         ],
+        "fingerprint": "1795512946061",
         "firingTriggerId": [
-          "4"
-        ]
+          "23"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/tags/46?apiLink=tag",
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
       }
     ],
     "trigger": [
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/triggers/23",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "triggerId": "1",
+        "workspaceId": "2",
+        "triggerId": "23",
+        "name": "All Pages",
+        "type": "pageview",
+        "fingerprint": "1795508121222",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/triggers/23?apiLink=trigger"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/triggers/24",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "triggerId": "24",
         "name": "Custom Event - View Item",
         "type": "customEvent",
         "customEventFilter": [
@@ -155,12 +872,16 @@
               }
             ]
           }
-        ]
+        ],
+        "fingerprint": "1795508122697",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/triggers/24?apiLink=trigger"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/triggers/25",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "triggerId": "2",
+        "workspaceId": "2",
+        "triggerId": "25",
         "name": "Custom Event - Add to Cart",
         "type": "customEvent",
         "customEventFilter": [
@@ -184,12 +905,16 @@
               }
             ]
           }
-        ]
+        ],
+        "fingerprint": "1795508124368",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/triggers/25?apiLink=trigger"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/triggers/26",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "triggerId": "3",
+        "workspaceId": "2",
+        "triggerId": "26",
         "name": "Custom Event - Begin Checkout",
         "type": "customEvent",
         "customEventFilter": [
@@ -213,12 +938,16 @@
               }
             ]
           }
-        ]
+        ],
+        "fingerprint": "1795508125948",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/triggers/26?apiLink=trigger"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/triggers/27",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "triggerId": "4",
+        "workspaceId": "2",
+        "triggerId": "27",
         "name": "Custom Event - Purchase",
         "type": "customEvent",
         "customEventFilter": [
@@ -242,14 +971,18 @@
               }
             ]
           }
-        ]
+        ],
+        "fingerprint": "1795508126479",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/triggers/27?apiLink=trigger"
       }
     ],
     "variable": [
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/4",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "1",
+        "workspaceId": "2",
+        "variableId": "4",
         "name": "Const - Meta Pixel ID",
         "type": "c",
         "parameter": [
@@ -258,12 +991,16 @@
             "key": "value",
             "value": "1514608697234207"
           }
-        ]
+        ],
+        "fingerprint": "1795508093373",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/4?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/5",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "2",
+        "workspaceId": "2",
+        "variableId": "5",
         "name": "Event ID - De duplication",
         "type": "jsm",
         "parameter": [
@@ -272,12 +1009,16 @@
             "key": "javascript",
             "value": "function() {\n  return new Date().getTime() + '.' + Math.floor(Math.random() * 1000000000);\n}"
           }
-        ]
+        ],
+        "fingerprint": "1795508094976",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/5?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/6",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "3",
+        "workspaceId": "2",
+        "variableId": "6",
         "name": "DLV - Items",
         "type": "v",
         "parameter": [
@@ -296,12 +1037,16 @@
             "key": "name",
             "value": "ecommerce.items"
           }
-        ]
+        ],
+        "fingerprint": "1795508096560",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/6?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/7",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "4",
+        "workspaceId": "2",
+        "variableId": "7",
         "name": "DLV - Currency",
         "type": "v",
         "parameter": [
@@ -320,12 +1065,16 @@
             "key": "name",
             "value": "ecommerce.currency"
           }
-        ]
+        ],
+        "fingerprint": "1795508098120",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/7?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/8",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "5",
+        "workspaceId": "2",
+        "variableId": "8",
         "name": "DLV - Value",
         "type": "v",
         "parameter": [
@@ -344,12 +1093,16 @@
             "key": "name",
             "value": "ecommerce.value"
           }
-        ]
+        ],
+        "fingerprint": "1795508099737",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/8?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/9",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "6",
+        "workspaceId": "2",
+        "variableId": "9",
         "name": "DLV - Transaction ID",
         "type": "v",
         "parameter": [
@@ -368,12 +1121,16 @@
             "key": "name",
             "value": "ecommerce.transaction_id"
           }
-        ]
+        ],
+        "fingerprint": "1795508101214",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/9?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/10",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "7",
+        "workspaceId": "2",
+        "variableId": "10",
         "name": "DLV - Customer Email",
         "type": "v",
         "parameter": [
@@ -392,12 +1149,16 @@
             "key": "name",
             "value": "customerBillingEmail"
           }
-        ]
+        ],
+        "fingerprint": "1795508102941",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/10?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/11",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "8",
+        "workspaceId": "2",
+        "variableId": "11",
         "name": "DLV - Customer Phone",
         "type": "v",
         "parameter": [
@@ -416,12 +1177,16 @@
             "key": "name",
             "value": "customerBillingPhone"
           }
-        ]
+        ],
+        "fingerprint": "1795508104548",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/11?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/12",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "9",
+        "workspaceId": "2",
+        "variableId": "12",
         "name": "DLV - Customer First Name",
         "type": "v",
         "parameter": [
@@ -440,12 +1205,16 @@
             "key": "name",
             "value": "customerBillingFirstName"
           }
-        ]
+        ],
+        "fingerprint": "1795508106039",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/12?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/13",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "10",
+        "workspaceId": "2",
+        "variableId": "13",
         "name": "DLV - Customer Last Name",
         "type": "v",
         "parameter": [
@@ -464,12 +1233,16 @@
             "key": "name",
             "value": "customerBillingLastName"
           }
-        ]
+        ],
+        "fingerprint": "1795508107595",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/13?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/14",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "11",
+        "workspaceId": "2",
+        "variableId": "14",
         "name": "DLV - Customer City",
         "type": "v",
         "parameter": [
@@ -488,12 +1261,16 @@
             "key": "name",
             "value": "customerBillingCity"
           }
-        ]
+        ],
+        "fingerprint": "1795508109129",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/14?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/15",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "12",
+        "workspaceId": "2",
+        "variableId": "15",
         "name": "DLV - Customer State",
         "type": "v",
         "parameter": [
@@ -512,12 +1289,16 @@
             "key": "name",
             "value": "customerBillingState"
           }
-        ]
+        ],
+        "fingerprint": "1795508110732",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/15?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/16",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "13",
+        "workspaceId": "2",
+        "variableId": "16",
         "name": "DLV - Customer Postcode",
         "type": "v",
         "parameter": [
@@ -536,12 +1317,16 @@
             "key": "name",
             "value": "customerBillingPostcode"
           }
-        ]
+        ],
+        "fingerprint": "1795508112121",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/16?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/17",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "14",
+        "workspaceId": "2",
+        "variableId": "17",
         "name": "DLV - Customer Country",
         "type": "v",
         "parameter": [
@@ -560,12 +1345,16 @@
             "key": "name",
             "value": "customerBillingCountry"
           }
-        ]
+        ],
+        "fingerprint": "1795508113579",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/17?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/18",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "15",
+        "workspaceId": "2",
+        "variableId": "18",
         "name": "cJS - FB - Product ID",
         "type": "jsm",
         "parameter": [
@@ -574,12 +1363,16 @@
             "key": "javascript",
             "value": "function() {\n  var items = {{DLV - Items}};\n  if (!items || !items.length) {\n    return [];\n  }\n  var ids = [];\n  for (var i = 0; i < items.length; i++) {\n    var id = items[i].item_id || items[i].id;\n    if (id !== undefined && id !== null && id !== '') {\n      ids.push(String(id));\n    }\n  }\n  return ids;\n}"
           }
-        ]
+        ],
+        "fingerprint": "1795508114931",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/18?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/19",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "16",
+        "workspaceId": "2",
+        "variableId": "19",
         "name": "cJS - FB - Product Name",
         "type": "jsm",
         "parameter": [
@@ -588,12 +1381,16 @@
             "key": "javascript",
             "value": "function() {\n  var items = {{DLV - Items}};\n  if (!items || !items.length) {\n    return '';\n  }\n  return items.map(function(item) {\n    return item.item_name || item.name || '';\n  }).filter(Boolean).join(', ');\n}"
           }
-        ]
+        ],
+        "fingerprint": "1795508116321",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/19?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/20",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "17",
+        "workspaceId": "2",
+        "variableId": "20",
         "name": "cJS - FB - Product Category",
         "type": "jsm",
         "parameter": [
@@ -602,12 +1399,16 @@
             "key": "javascript",
             "value": "function() {\n  var items = {{DLV - Items}};\n  if (!items || !items.length) {\n    return '';\n  }\n  return items.map(function(item) {\n    return item.item_category || item.category || '';\n  }).filter(Boolean).join(', ');\n}"
           }
-        ]
+        ],
+        "fingerprint": "1795508117732",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/20?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/21",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "18",
+        "workspaceId": "2",
+        "variableId": "21",
         "name": "cJS - FB - Num of Items",
         "type": "jsm",
         "parameter": [
@@ -616,12 +1417,16 @@
             "key": "javascript",
             "value": "function() {\n  var items = {{DLV - Items}};\n  if (!items || !items.length) {\n    return 1;\n  }\n  return items.reduce(function(total, item) {\n    var qty = parseInt(item.quantity, 10);\n    return total + (isNaN(qty) ? 1 : qty);\n  }, 0);\n}"
           }
-        ]
+        ],
+        "fingerprint": "1795508119184",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/21?apiLink=variable"
       },
       {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/22",
         "accountId": "6251820990",
         "containerId": "288471691",
-        "variableId": "19",
+        "workspaceId": "2",
+        "variableId": "22",
         "name": "cJS - FB - Contents",
         "type": "jsm",
         "parameter": [
@@ -630,8 +1435,139 @@
             "key": "javascript",
             "value": "function() {\n  var items = {{DLV - Items}};\n  if (!items || !items.length) {\n    return [];\n  }\n  return items.map(function(item) {\n    var price = parseFloat(item.price || item.item_price || 0);\n    var qty = parseInt(item.quantity, 10) || 1;\n    return {\n      id: String(item.item_id || item.id || ''),\n      item_price: isNaN(price) ? 0 : price,\n      quantity: qty\n    };\n  });\n}"
           }
-        ]
+        ],
+        "fingerprint": "1795508119744",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/22?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/40",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "40",
+        "name": "cJS - FB - Value",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "javascript",
+            "value": "function() {\n  var v = {{DLV - Value}};\n  if (v === undefined || v === null || v === '') {\n    return 0;\n  }\n  var parsed = parseFloat(String(v).replace(/[^0-9\\.-]+/g, ''));\n  return isNaN(parsed) ? 0 : parsed;\n}"
+          }
+        ],
+        "fingerprint": "1795509718470",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/40?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/41",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "41",
+        "name": "cJS - FB - Currency",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "javascript",
+            "value": "function() {\n  var c = {{DLV - Currency}};\n  if (!c || typeof c !== 'string') return 'INR';\n  return c.trim().toUpperCase();\n}"
+          }
+        ],
+        "fingerprint": "1795509720091",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/41?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/42",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "42",
+        "name": "DLV - User Data Email",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "user_data.email"
+          }
+        ],
+        "fingerprint": "1795509720839",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/42?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/43",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "43",
+        "name": "DLV - User Data Phone",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "user_data.phone_number"
+          }
+        ],
+        "fingerprint": "1795509721544",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/43?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/44",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "44",
+        "name": "cJS - FB - Customer Email",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "javascript",
+            "value": "function() {\n  var em = {{DLV - Customer Email}} || {{DLV - User Data Email}} || '';\n  return em ? String(em).trim().toLowerCase() : '';\n}"
+          }
+        ],
+        "fingerprint": "1795509722995",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/44?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/45",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "45",
+        "name": "cJS - FB - Customer Phone",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "javascript",
+            "value": "function() {\n  var p = {{DLV - Customer Phone}} || {{DLV - User Data Phone}} || '';\n  if (!p) return '';\n  var clean = String(p).replace(/[\\s\\-\\(\\)\\.]/g, '');\n  if (clean.indexOf('0') === 0 && clean.length === 11) {\n    clean = '+91' + clean.substring(1);\n  } else if (clean.length === 10 && clean.indexOf('+') !== 0) {\n    clean = '+91' + clean;\n  }\n  return clean;\n}"
+          }
+        ],
+        "fingerprint": "1795509724479",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/45?apiLink=variable"
       }
-    ]
+    ],
+    "customTemplate": []
   }
 }
