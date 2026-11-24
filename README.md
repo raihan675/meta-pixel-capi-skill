@@ -63,6 +63,8 @@ Get straight to implementation using our dedicated, production-verified playbook
   Complete 12-step lifecycle: sGTM provisioning, Stape custom domain (`ss.domain.com`), GA4 transport, `x-fb-cd-*` parameter translation, deduplication, and EMQ 8.0+.
 * 📙 **[Playbook 3: Non-Technical Meta Ads Specialist Collaboration Workflow](./setup-guides/03-non-technical-meta-ads-specialist-workflow.md)**
   A practical guide for media buyers to partner with the AI agent to implement full tracking with zero manual coding.
+* 📋 **[Playbook 4: Specialist Step-by-Step Prompt Sequence](./setup-guides/04-specialist-prompt-sequence.md)**
+  A copy-pasteable prompt sequence to steer the agent through kickoff, audit, container creation, testing, and handover.
 * ⚖️ **[Template Selection Guide: Meta Official vs. Stape.io Pixel Template](./03-web-gtm-implementation/meta-official-vs-stape-pixel-template.md)**
   Direct comparison, ad-blocker bypassing analysis, cookie preservation, and decision matrix for choosing between `facebookarchive` and `stape-io` Web GTM templates.
 

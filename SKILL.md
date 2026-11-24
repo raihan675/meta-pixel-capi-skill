@@ -87,6 +87,8 @@ Use this skill whenever you need to design, implement, audit, or troubleshoot Me
   * Complete 12-step lifecycle covering sGTM, Stape.io, custom domains (`ss.domain.com`), GA4 routing, `x-fb-cd-*` parameter translation, deduplication, and EMQ 8.0+.
 * 📙 **Playbook 3: Meta Ads Specialist Collaboration Workflow**: [setup-guides/03-non-technical-meta-ads-specialist-workflow.md](./setup-guides/03-non-technical-meta-ads-specialist-workflow.md)
   * Non-technical, business-oriented guide for Meta media buyers to implement tracking via AI agent collaboration with zero manual coding.
+* 📋 **Playbook 4: Specialist Step-by-Step Prompt Sequence**: [setup-guides/04-specialist-prompt-sequence.md](./setup-guides/04-specialist-prompt-sequence.md)
+  * Ready-to-use, copy-pasteable prompt sequence to drive the AI agent from project kickoff to production publish.
 
 ### B. Template Selection Engine: "Which Tag Template Should I Use?"
 When asked which Web GTM Pixel tag template to choose:
@@ -109,6 +111,7 @@ Refer to the included modular guides for step-by-step procedures:
 * [Playbook 1: Browser Pixel Setup Guide](./setup-guides/01-meta-pixel-browser-setup-guide.md)
 * [Playbook 2: Server Conversions API Setup Guide](./setup-guides/02-meta-conversions-api-server-guide.md)
 * [Playbook 3: Meta Ads Specialist Collaboration Guide](./setup-guides/03-non-technical-meta-ads-specialist-workflow.md)
+* [Playbook 4: Specialist Step-by-Step Prompt Sequence](./setup-guides/04-specialist-prompt-sequence.md)
 * [Architecture & Data Flow](./01-architecture-and-fundamentals/dual-tagging-hybrid-architecture.md)
 * [Event Deduplication Guide](./01-architecture-and-fundamentals/event-deduplication-guide.md)
 * [Event Match Quality (EMQ) Guide](./01-architecture-and-fundamentals/event-match-quality-emq.md)
