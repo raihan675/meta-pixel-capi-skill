@@ -44,7 +44,38 @@ Use this skill whenever you need to design, implement, audit, or troubleshoot Me
    * Browser Pixel (client-side) + Conversions API (server-side via GA4 transport in Web GTM).
    * Host Server GTM on a first-party custom domain (`ss.domain.com`) to extend `_fbp`/`_fbc` cookie lifetime to 90 days.
 
-2. **Strict Event Deduplication:**
+2. **Mandatory Protocol for Meta Conversions API (CAPI) / Server-Side Tracking:**
+   Whenever asked to implement or update Meta Conversions API or Server-Side Tracking, the agent **MUST STRICTLY EXECUTE BOTH SIDES** following **[Playbook 2: Meta Conversions API (CAPI) Server-Side Setup Guide (sGTM + Stape.io)](./setup-guides/02-meta-conversions-api-server-guide.md)** and the modular guides in **[04-server-gtm-implementation/](./04-server-gtm-implementation/)**:
+   
+   * **PART A: Web GTM Transport Layer (Playbook 2, Steps 7 & 8)**
+     1. **First-Party Cookie & User Variables**:
+        * `Cookie - _fbp` (1st Party Cookie: `_fbp`)
+        * `Cookie - _fbc` (1st Party Cookie: `_fbc`)
+        * `DLV - Customer User ID` (`user_data.customer_id` or `customerId`)
+     2. **Google Tag - Server Transport (`googtag`)**:
+        * Config Settings: `server_container_url: {{Const - Server Container URL}}`, `first_party_collection: true`, `send_page_view: true`.
+        * Shared Event Settings: `event_id: {{Event ID - De duplication}}`, `x-fb-ck-fbp: {{Cookie - _fbp}}`, `x-fb-ck-fbc: {{Cookie - _fbc}}`.
+        * Trigger: `All Pages`.
+     3. **GA4 Ecommerce Event Tags with Mandatory `x-fb-cd-*` Convention**:
+        * The `x-fb-cd-*` format is mandatory per [x-fb-parameter-mapping-explained.md](./04-server-gtm-implementation/x-fb-parameter-mapping-explained.md) because Server CAPI templates automatically strip the prefix and map parameters into Meta's authoritative `custom_data` object without manual server scripting.
+        * `GA4 - Event - ViewItem` (`view_item`): `event_id`, `x-fb-cd-content_type: product`, `x-fb-cd-content_ids`, `x-fb-cd-content_name`, `x-fb-cd-content_category`, `x-fb-cd-value`, `x-fb-cd-currency`, `x-fb-cd-contents`, `x-fb-ck-fbp`, `x-fb-ck-fbc`. Trigger: `Custom Event - View Item`.
+        * `GA4 - Event - AddToCart` (`add_to_cart`): Identical parameters to `view_item`. Trigger: `Custom Event - Add to Cart`.
+        * `GA4 - Event - BeginCheckout` (`begin_checkout`): Identical parameters + `x-fb-cd-num_items: {{cJS - FB - Num of Items}}`. Trigger: `Custom Event - Begin Checkout`.
+        * `GA4 - Event - Purchase` (`purchase`): Identical parameters + `x-fb-cd-order_id: {{DLV - Transaction ID}}`, `x-fb-ud-external_id: {{DLV - Customer User ID}}`, and customer billing parameters (`email`, `phone`, `first_name`, `last_name`, `city`, `state`, `postal_code`, `country`) for **EMQ 8.0+**. Trigger: `Custom Event - Purchase`.
+
+   * **PART B: Server GTM CAPI Layer (Playbook 2, Steps 6 & 11 & [04-server-gtm-implementation/](./04-server-gtm-implementation/))**
+     1. **Template Installation**: Install `stape-io/facebook-tag` (or `facebookincubator/conversions-api-tag`) into Server GTM.
+     2. **Server Variables**:
+        * `Const - Meta Pixel ID`
+        * `Const - Meta CAPI Access Token`
+        * `Const - Meta Test Event Code`
+        * `ED - Event ID` (Event Data variable: `event_id`)
+        * `ED - Client Name` (Event Data variable: `client_name`)
+     3. **Server Trigger**: `All Events - GA4 Client` (Custom Event matching `.*` when client is `GA4`).
+     4. **Server Tag**: `Meta CAPI - All Events` (Event Name: `inherit`, Pixel ID, Access Token, Test ID, auto-map server data: `true`, auto-map user data: `true`, auto-map custom data: `true`, generate `_fbp`: `true`).
+     5. **Anti-PII Protection**: If a downstream GA4 Server Tag exists, exclude `x-fb-*`, `user_data`, `email`, and `phone` per [exclude-parameters-from-ga4.md](./04-server-gtm-implementation/exclude-parameters-from-ga4.md).
+
+3. **Strict Event Deduplication:**
    * Generate a unique `event_id` per user interaction.
    * Pass the exact same `event_id` and standard event name (`PageView`, `ViewContent`, `AddToCart`, `InitiateCheckout`, `Purchase`) to both Browser Pixel and Server CAPI tags.
 
