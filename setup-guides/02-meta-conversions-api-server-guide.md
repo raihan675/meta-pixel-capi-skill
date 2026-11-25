@@ -175,9 +175,19 @@ Configure each GA4 Event Tag in Web GTM:
   | `x-fb-cd-value` | `{{DLV - ecommerce.value}}` |
   | `x-fb-cd-currency` | `{{DLV - ecommerce.currency}}` |
   | `x-fb-cd-order_id` | `{{DLV - ecommerce.transaction_id}}`|
-  | `user_data` | `{{User-Provided Data Variable}}` |
+  | `user_data.email_address` | `{{cJS - FB - Customer Email}}` |
+  | `user_data.phone_number` | `{{cJS - FB - Customer Phone}}` |
+  | `user_data.address.first_name` | `{{DLV - Customer First Name}}` |
+  | `user_data.address.last_name` | `{{DLV - Customer Last Name}}` |
+  | `user_data.address.street` | `{{DLV - Customer Street}}` |
+  | `user_data.address.city` | `{{DLV - Customer City}}` |
+  | `user_data.address.region` | `{{DLV - Customer State}}` |
+  | `user_data.address.postal_code` | `{{DLV - Customer Postcode}}` |
+  | `user_data.address.country` | `{{DLV - Customer Country}}` |
+  | `user_id` | `{{DLV - Customer User ID}}` |
   | `x-fb-ud-external_id` | `{{DLV - Customer User ID}}` |
 * Trigger: Custom Event `purchase`
+* **Reference**: [Google sGTM Common Event Data](https://developers.google.com/tag-platform/tag-manager/server-side/common-event-data) (`sha256_*` variants are also supported if pre-hashed).
 
 ---
 

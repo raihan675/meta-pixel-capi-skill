@@ -18,6 +18,7 @@ When utilizing **Server GTM with the Facebook Conversions API Tag**, the tag han
 | **Phone** | `ph` | `user_data.phone_number` | E.164 standard without spaces/hyphens (e.g. `+15551234567` or `919876543210`). |
 | **First Name** | `fn` | `user_data.address.first_name` | Lowercase letters only, special characters removed. |
 | **Last Name** | `ln` | `user_data.address.last_name` | Lowercase letters only, special characters removed. |
+| **Street** | *(address)* | `user_data.address.street` | Street and number for the address of the user (`123 Fake St`). |
 | **City** | `ct` | `user_data.address.city` | Lowercase, all spaces removed (e.g. `newyork`, `kolkata`). |
 | **State / Region** | `st` | `user_data.address.region` | 2-letter lowercase code (e.g. `ca`, `ny`, `dl`, `wb`). |
 | **Zip / Postcode** | `zp` | `user_data.address.postal_code`| Trimmed, lowercase, space removed (e.g. `90210`, `700001`). |
@@ -38,8 +39,12 @@ In Web GTM, inside your GA4 Event Tag (e.g. for `purchase` or `sign_up`), config
   * `user_data.phone_number`: `{{DLV - Customer Phone}}`
   * `user_data.address.first_name`: `{{DLV - Customer First Name}}`
   * `user_data.address.last_name`: `{{DLV - Customer Last Name}}`
+  * `user_data.address.street`: `{{DLV - Customer Street}}`
   * `user_data.address.city`: `{{DLV - Customer City}}`
   * `user_data.address.region`: `{{DLV - Customer State}}`
   * `user_data.address.postal_code`: `{{DLV - Customer Postcode}}`
   * `user_data.address.country`: `{{DLV - Customer Country}}`
+  * `user_id`: `{{DLV - Customer ID}}`
   * `x-fb-ud-external_id`: `{{DLV - Customer ID}}`
+
+> **Reference:** [Google sGTM Common Event Data](https://developers.google.com/tag-platform/tag-manager/server-side/common-event-data) (Pre-hashed `user_data.sha256_email_address`, `user_data.sha256_phone_number`, `user_data.address.sha256_first_name`, and `user_data.address.sha256_last_name` are also supported.)
