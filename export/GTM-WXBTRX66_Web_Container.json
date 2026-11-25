@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-11-25T09:05:18.950Z",
+  "exportTime": "2026-11-25T09:21:25.046Z",
   "containerVersion": {
     "path": "accounts/6251820990/containers/288471691/versions/0",
     "accountId": "6251820990",
@@ -1854,7 +1854,7 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "email"
+                    "value": "user_data.email_address"
                   },
                   {
                     "type": "template",
@@ -1869,7 +1869,7 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "phone"
+                    "value": "user_data.phone_number"
                   },
                   {
                     "type": "template",
@@ -1884,7 +1884,7 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "first_name"
+                    "value": "user_data.address.first_name"
                   },
                   {
                     "type": "template",
@@ -1899,7 +1899,7 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "last_name"
+                    "value": "user_data.address.last_name"
                   },
                   {
                     "type": "template",
@@ -1914,7 +1914,22 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "city"
+                    "value": "user_data.address.street"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - Customer Street}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "user_data.address.city"
                   },
                   {
                     "type": "template",
@@ -1929,7 +1944,7 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "state"
+                    "value": "user_data.address.region"
                   },
                   {
                     "type": "template",
@@ -1944,7 +1959,7 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "postal_code"
+                    "value": "user_data.address.postal_code"
                   },
                   {
                     "type": "template",
@@ -1959,12 +1974,27 @@
                   {
                     "type": "template",
                     "key": "parameter",
-                    "value": "country"
+                    "value": "user_data.address.country"
                   },
                   {
                     "type": "template",
                     "key": "parameterValue",
                     "value": "{{DLV - Customer Country}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "user_id"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - Customer User ID}}"
                   }
                 ]
               },
@@ -2026,7 +2056,7 @@
             "value": "G-SSMAINDISH"
           }
         ],
-        "fingerprint": "1795597506780",
+        "fingerprint": "1795598455377",
         "firingTriggerId": [
           "27"
         ],
@@ -2352,10 +2382,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingEmail"
+            "value": "user_data.billing_email"
           }
         ],
-        "fingerprint": "1795508102941",
+        "fingerprint": "1795598450782",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/10?apiLink=variable"
       },
       {
@@ -2380,10 +2410,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingPhone"
+            "value": "user_data.billing_phone"
           }
         ],
-        "fingerprint": "1795508104548",
+        "fingerprint": "1795598452313",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/11?apiLink=variable"
       },
       {
@@ -2408,10 +2438,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingFirstName"
+            "value": "user_data.billing_first_name"
           }
         ],
-        "fingerprint": "1795508106039",
+        "fingerprint": "1795598440195",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/12?apiLink=variable"
       },
       {
@@ -2436,10 +2466,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingLastName"
+            "value": "user_data.billing_last_name"
           }
         ],
-        "fingerprint": "1795508107595",
+        "fingerprint": "1795598441954",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/13?apiLink=variable"
       },
       {
@@ -2464,10 +2494,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingCity"
+            "value": "user_data.billing_city"
           }
         ],
-        "fingerprint": "1795508109129",
+        "fingerprint": "1795598445218",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/14?apiLink=variable"
       },
       {
@@ -2492,10 +2522,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingState"
+            "value": "user_data.billing_state"
           }
         ],
-        "fingerprint": "1795508110732",
+        "fingerprint": "1795598447219",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/15?apiLink=variable"
       },
       {
@@ -2520,10 +2550,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingPostcode"
+            "value": "user_data.billing_postcode"
           }
         ],
-        "fingerprint": "1795508112121",
+        "fingerprint": "1795598448948",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/16?apiLink=variable"
       },
       {
@@ -2548,10 +2578,10 @@
           {
             "type": "template",
             "key": "name",
-            "value": "customerBillingCountry"
+            "value": "user_data.billing_country"
           }
         ],
-        "fingerprint": "1795508113579",
+        "fingerprint": "1795598450073",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/17?apiLink=variable"
       },
       {
@@ -2853,6 +2883,34 @@
         ],
         "fingerprint": "1795597495965",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/60?apiLink=variable"
+      },
+      {
+        "path": "accounts/6251820990/containers/288471691/workspaces/2/variables/61",
+        "accountId": "6251820990",
+        "containerId": "288471691",
+        "workspaceId": "2",
+        "variableId": "61",
+        "name": "DLV - Customer Street",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "user_data.billing_address"
+          }
+        ],
+        "fingerprint": "1795598443565",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288471691/workspaces/2/variables/61?apiLink=variable"
       }
     ],
     "customTemplate": [
