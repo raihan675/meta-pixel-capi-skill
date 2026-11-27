@@ -1,95 +1,11 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-11-27T05:14:35.699Z",
+  "exportTime": "2026-11-27T05:33:24.739Z",
   "containerVersion": {
     "path": "accounts/6251820990/containers/288475218/versions/0",
     "accountId": "6251820990",
     "containerId": "288475218",
     "tag": [
-      {
-        "path": "accounts/6251820990/containers/288475218/workspaces/3/tags/11",
-        "accountId": "6251820990",
-        "containerId": "288475218",
-        "workspaceId": "3",
-        "tagId": "11",
-        "name": "Meta CAPI - All Events",
-        "type": "cvt_288475218_4",
-        "parameter": [
-          {
-            "type": "boolean",
-            "key": "autoMapCustomData",
-            "value": "true"
-          },
-          {
-            "type": "boolean",
-            "key": "autoMapServerEventData",
-            "value": "true"
-          },
-          {
-            "type": "boolean",
-            "key": "generateFbp",
-            "value": "true"
-          },
-          {
-            "type": "boolean",
-            "key": "autoMapUserData",
-            "value": "true"
-          },
-          {
-            "type": "template",
-            "key": "accessToken",
-            "value": "{{Const - Meta CAPI Access Token}}"
-          },
-          {
-            "type": "template",
-            "key": "inheritEventName",
-            "value": "inherit"
-          },
-          {
-            "type": "template",
-            "key": "actionSource",
-            "value": "website"
-          },
-          {
-            "type": "template",
-            "key": "pixelId",
-            "value": "{{Const - Meta Pixel ID}}"
-          },
-          {
-            "type": "boolean",
-            "key": "useHttpOnlyCookie",
-            "value": "false"
-          },
-          {
-            "type": "boolean",
-            "key": "mapViewItemListToViewContent",
-            "value": "false"
-          },
-          {
-            "type": "boolean",
-            "key": "useOptimisticScenario",
-            "value": "false"
-          },
-          {
-            "type": "template",
-            "key": "testId",
-            "value": "{{Const - Meta Test Event Code}}"
-          },
-          {
-            "type": "boolean",
-            "key": "enableEventEnhancement",
-            "value": "true"
-          }
-        ],
-        "fingerprint": "1795596304665",
-        "firingTriggerId": [
-          "10"
-        ],
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/tags/11?apiLink=tag",
-        "consentSettings": {
-          "consentStatus": "notSet"
-        }
-      },
       {
         "path": "accounts/6251820990/containers/288475218/workspaces/3/tags/15",
         "accountId": "6251820990",
@@ -379,6 +295,122 @@
         "consentSettings": {
           "consentStatus": "notSet"
         }
+      },
+      {
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/tags/11",
+        "accountId": "6251820990",
+        "containerId": "288475218",
+        "workspaceId": "3",
+        "tagId": "11",
+        "name": "Meta CAPI - All Events",
+        "type": "cvt_288475218_4",
+        "parameter": [
+          {
+            "type": "boolean",
+            "key": "autoMapCustomData",
+            "value": "true"
+          },
+          {
+            "type": "template",
+            "key": "adStorageConsent",
+            "value": "optional"
+          },
+          {
+            "type": "boolean",
+            "key": "autoMapServerEventData",
+            "value": "true"
+          },
+          {
+            "type": "boolean",
+            "key": "generateFbp",
+            "value": "true"
+          },
+          {
+            "type": "boolean",
+            "key": "autoMapUserData",
+            "value": "true"
+          },
+          {
+            "type": "boolean",
+            "key": "overrideCookieDomain",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "accessToken",
+            "value": "{{Const - Meta CAPI Access Token}}"
+          },
+          {
+            "type": "boolean",
+            "key": "useAppSecretProof",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "inheritEventName",
+            "value": "inherit"
+          },
+          {
+            "type": "template",
+            "key": "actionSource",
+            "value": "website"
+          },
+          {
+            "type": "template",
+            "key": "pixelId",
+            "value": "{{Const - Meta Pixel ID}}"
+          },
+          {
+            "type": "boolean",
+            "key": "useHttpOnlyCookie",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "itemIdKey"
+          },
+          {
+            "type": "boolean",
+            "key": "mapViewItemListToViewContent",
+            "value": "false"
+          },
+          {
+            "type": "boolean",
+            "key": "useOptimisticScenario",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "testId",
+            "value": "TEST6265"
+          },
+          {
+            "type": "template",
+            "key": "mapItemDataTo",
+            "value": "contents"
+          },
+          {
+            "type": "boolean",
+            "key": "enableMultipixelSetup",
+            "value": "false"
+          },
+          {
+            "type": "boolean",
+            "key": "enableEventEnhancement",
+            "value": "true"
+          }
+        ],
+        "fingerprint": "1795756663879",
+        "firingTriggerId": [
+          "10"
+        ],
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/tags/11?apiLink=tag",
+        "monitoringMetadata": {
+          "type": "map"
+        },
+        "consentSettings": {
+          "consentStatus": "notSet"
+        }
       }
     ],
     "trigger": [
@@ -430,12 +462,7 @@
               {
                 "type": "template",
                 "key": "arg1",
-                "value": "^(page_view|view_item|add_to_cart|begin_checkout|purchase|add_payment_info|search|sign_up|generate_lead)$"
-              },
-              {
-                "type": "boolean",
-                "key": "ignore_case",
-                "value": "true"
+                "value": "^(page_view|view_item|add_to_cart|begin_checkout|purchase)$"
               }
             ]
           }
@@ -457,7 +484,7 @@
             ]
           }
         ],
-        "fingerprint": "1795756395167",
+        "fingerprint": "1795756623166",
         "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/triggers/10?apiLink=trigger"
       }
     ],
