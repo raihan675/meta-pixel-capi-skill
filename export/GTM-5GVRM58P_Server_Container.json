@@ -1,16 +1,16 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-11-25T14:29:49.017Z",
+  "exportTime": "2026-11-27T05:14:35.699Z",
   "containerVersion": {
     "path": "accounts/6251820990/containers/288475218/versions/0",
     "accountId": "6251820990",
     "containerId": "288475218",
     "tag": [
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/tags/11",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/tags/11",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "tagId": "11",
         "name": "Meta CAPI - All Events",
         "type": "cvt_288475218_4",
@@ -85,16 +85,16 @@
         "firingTriggerId": [
           "10"
         ],
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/tags/11?apiLink=tag",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/tags/11?apiLink=tag",
         "consentSettings": {
           "consentStatus": "notSet"
         }
       },
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/tags/15",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/tags/15",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "tagId": "15",
         "name": "GA4 - Server Tag (All Events)",
         "type": "sgtmgaaw",
@@ -375,7 +375,7 @@
         "firingTriggerId": [
           "14"
         ],
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/tags/15?apiLink=tag",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/tags/15?apiLink=tag",
         "consentSettings": {
           "consentStatus": "notSet"
         }
@@ -383,43 +383,10 @@
     ],
     "trigger": [
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/triggers/10",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/triggers/14",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
-        "triggerId": "10",
-        "name": "All Events - GA4 Client",
-        "type": "customEvent",
-        "customEventFilter": [
-          {
-            "type": "matchRegex",
-            "parameter": [
-              {
-                "type": "template",
-                "key": "arg0",
-                "value": "{{_event}}"
-              },
-              {
-                "type": "template",
-                "key": "arg1",
-                "value": ".*"
-              },
-              {
-                "type": "boolean",
-                "key": "ignore_case",
-                "value": "true"
-              }
-            ]
-          }
-        ],
-        "fingerprint": "1795596301484",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/triggers/10?apiLink=trigger"
-      },
-      {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/triggers/14",
-        "accountId": "6251820990",
-        "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "triggerId": "14",
         "name": "Client Name - GA4",
         "type": "always",
@@ -441,15 +408,65 @@
           }
         ],
         "fingerprint": "1795616948552",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/triggers/14?apiLink=trigger"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/triggers/14?apiLink=trigger"
+      },
+      {
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/triggers/10",
+        "accountId": "6251820990",
+        "containerId": "288475218",
+        "workspaceId": "3",
+        "triggerId": "10",
+        "name": "CAPI - Meta Events Trigger",
+        "type": "customEvent",
+        "customEventFilter": [
+          {
+            "type": "matchRegex",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "^(page_view|view_item|add_to_cart|begin_checkout|purchase|add_payment_info|search|sign_up|generate_lead)$"
+              },
+              {
+                "type": "boolean",
+                "key": "ignore_case",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "equals",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{Client Name}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "GA4"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1795756395167",
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/triggers/10?apiLink=trigger"
       }
     ],
     "variable": [
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/variables/5",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/variables/5",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "variableId": "5",
         "name": "Const - Meta Pixel ID",
         "type": "c",
@@ -461,13 +478,13 @@
           }
         ],
         "fingerprint": "1795596227392",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/variables/5?apiLink=variable"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/variables/5?apiLink=variable"
       },
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/variables/6",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/variables/6",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "variableId": "6",
         "name": "Const - Meta CAPI Access Token",
         "type": "c",
@@ -479,13 +496,13 @@
           }
         ],
         "fingerprint": "1795596228126",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/variables/6?apiLink=variable"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/variables/6?apiLink=variable"
       },
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/variables/7",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/variables/7",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "variableId": "7",
         "name": "Const - Meta Test Event Code",
         "type": "c",
@@ -497,13 +514,13 @@
           }
         ],
         "fingerprint": "1795596229902",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/variables/7?apiLink=variable"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/variables/7?apiLink=variable"
       },
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/variables/8",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/variables/8",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "variableId": "8",
         "name": "ED - Event ID",
         "type": "ed",
@@ -515,13 +532,13 @@
           }
         ],
         "fingerprint": "1795596231543",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/variables/8?apiLink=variable"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/variables/8?apiLink=variable"
       },
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/variables/9",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/variables/9",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "variableId": "9",
         "name": "ED - Client Name",
         "type": "ed",
@@ -533,13 +550,13 @@
           }
         ],
         "fingerprint": "1795596233072",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/variables/9?apiLink=variable"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/variables/9?apiLink=variable"
       },
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/variables/13",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/variables/13",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "variableId": "13",
         "name": "Const - GA4 Measurement ID",
         "type": "c",
@@ -551,15 +568,15 @@
           }
         ],
         "fingerprint": "1795616945564",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/variables/13?apiLink=variable"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/variables/13?apiLink=variable"
       }
     ],
     "customTemplate": [
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/templates/4",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/templates/4",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "templateId": "4",
         "name": "Facebook Conversion API",
         "fingerprint": "1795596197969",
@@ -568,10 +585,10 @@
     ],
     "client": [
       {
-        "path": "accounts/6251820990/containers/288475218/workspaces/2/clients/1",
+        "path": "accounts/6251820990/containers/288475218/workspaces/3/clients/1",
         "accountId": "6251820990",
         "containerId": "288475218",
-        "workspaceId": "2",
+        "workspaceId": "3",
         "clientId": "1",
         "name": "GA4",
         "type": "gaaw_client",
@@ -608,7 +625,7 @@
           }
         ],
         "fingerprint": "1795499369743",
-        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/2/clients/1?apiLink=client"
+        "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6251820990/containers/288475218/workspaces/3/clients/1?apiLink=client"
       }
     ]
   }

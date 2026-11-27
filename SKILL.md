@@ -71,7 +71,7 @@ Use this skill whenever you need to design, implement, audit, or troubleshoot Me
         * `Const - Meta Test Event Code`
         * `ED - Event ID` (Event Data variable: `event_id`)
         * `ED - Client Name` (Event Data variable: `client_name`)
-     3. **Server Trigger**: `All Events - GA4 Client` (Custom Event matching `.*` when client is `GA4`).
+     3. **Server Trigger**: `CAPI - Meta Events Trigger` (Custom Event with `Client Name` equals `GA4` AND `Event Name` matches RegEx (ignore case): `^(page_view|view_item|add_to_cart|begin_checkout|purchase|add_payment_info|search|sign_up|generate_lead)$` per [conversions-api-tag-setup.md](./04-server-gtm-implementation/conversions-api-tag-setup.md)).
      4. **Server Tag**: `Meta CAPI - All Events` (Event Name: `inherit`, Pixel ID, Access Token, Test ID, auto-map server data: `true`, auto-map user data: `true`, auto-map custom data: `true`, generate `_fbp`: `true`).
      5. **Anti-PII Protection**: If a downstream GA4 Server Tag exists, exclude `x-fb-*`, `user_data`, `email`, and `phone` per [exclude-parameters-from-ga4.md](./04-server-gtm-implementation/exclude-parameters-from-ga4.md).
 
